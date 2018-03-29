@@ -1,29 +1,32 @@
 $ ->
   window.Glob ?= {}
-
   apiUrl =
     reg: '/register/'
 
-  defaultData =
-    email: ''
+  handleError = (error) ->
+      alert('something went wrong')
+
+  vm = ko.mapping.fromJS
+    email:'eee'
     psw: ''
     comment: ''
 
-  vm = ko.mapping.fromJS
-    enteredData: defaultData
-
   vm.onSubmit = ->
-    console.log('data', vm.enteredData)
-#    data = vm.enteredData
-#    $.ajax
-#      url: apiUrl.reg
-#      type: 'POST'
-#      data: JSON.stringify(data)
-#      dataType: 'json'
-#      contentType: 'application/json'
-#      .fail () ->
-#      alert('Error occurred')
-#      .done (response) ->
-#        alert('Successfully sent')
+#    console.log('email', vm.email())
+#    console.log('psw', vm.psw())
+#    console.log('comment', vm.comment())
+    $.ajax
+      url: apiUrl.reg
+      type: 'POST'
+      data: JSON.stringify(
+        email: vm.email()
+        psw: vm.psw()
+        comment: vm.comment()
+      )
+      dataType: 'json'
+      contentType: 'application/json'
+    .fail handleError
+    .done (response) ->
+        alert(response)
 
   ko.applyBindings {vm}

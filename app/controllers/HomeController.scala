@@ -3,27 +3,25 @@ package controllers
 import javax.inject._
 
 import com.typesafe.scalalogging.LazyLogging
+import play.api.libs.json.Json
 import play.api.mvc._
+import views.html.forms._
+
+import scala.concurrent.Future
 
 
 @Singleton
-class HomeController @Inject()(val controllerComponents: ControllerComponents)
+class HomeController @Inject()(val controllerComponents: ControllerComponents,
+                               indexTemplate: index)
   extends BaseController with LazyLogging {
 
   def index = Action {
-    logger.info(s"asdfdfddd")
-    Ok(views.html.index("Your new application is ready."))
+    Ok(indexTemplate())
   }
 
-  def homeWork = Action {
-    Ok(views.html.home_works())
-  }
-
-  def register() = Action { implicit request => {
-    val rr = request.body
-//    val rr = (request.body \ "email").as[String]
-    logger.info(s"rr: $rr")
-    Ok("asd")
+  def register() = Action.async(parse.json){ implicit request => {
+    val email = (request.body \ "email").as[String]
+    Future.successful(Ok(Json.toJson(s"You successfully added email $email")))
   }}
 
 }
