@@ -1,0 +1,280 @@
+@(activePage: String)
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class=@if(activePage == "home"){"active"}><a href="@routes.HomeController.index()">Home</a></li>
+      <li class=@if(activePage == "homeWork"){"active"}><a href="@routes.HomeController.homeWork()">Home works</a></li>
+      <li><a href="#">Page 2</a></li>
+      <li><a href="#">Page 3</a></li>
+    </ul>
+  </div>
+</nav>
+<!--<nav class="navbar navbar-inverse">-->
+<!--<div class="container-fluid">-->
+<!--<div class="navbar-header">-->
+<!--<a class="navbar-brand" href="#">WebSiteName</a>-->
+<!--</div>-->
+<!--<ul class="nav navbar-nav">-->
+<!--<li class="active"><a href="#">Home</a></li>-->
+<!--<li><a href="#">Page 1</a></li>-->
+<!--<li><a href="#">Page 2</a></li>-->
+<!--<li><a href="#">Page 3</a></li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--</nav>-->
+<!--<nav class="navbar navbar-inverse">-->
+<!--<div class="container-fluid">-->
+<!--<div class="navbar-header">-->
+<!--<a class="navbar-brand" href="#">WebSiteName</a>-->
+<!--</div>-->
+<!--<ul class="nav navbar-nav">-->
+<!--<li class="active"><a href="#">Home</a></li>-->
+<!--<li class="dropdown">-->
+<!--<a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1-->
+<!--<span class="caret"></span></a>-->
+<!--<ul class="dropdown-menu">-->
+<!--<li><a href="#">Page 1-1</a></li>-->
+<!--<li><a href="#">Page 1-2</a></li>-->
+<!--<li><a href="#">Page 1-3</a></li>-->
+<!--</ul>-->
+<!--</li>-->
+<!--<li><a href="#">Page 2</a></li>-->
+<!--<li><a href="#">Page 3</a></li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--</nav>-->
+<!--<nav class="navbar navbar-inverse">-->
+<!--<div class="container-fluid">-->
+<!--<div class="navbar-header">-->
+<!--<a class="navbar-brand" href="#">WebSiteName</a>-->
+<!--</div>-->
+<!--<ul class="nav navbar-nav">-->
+<!--<li class="active"><a href="#">Home</a></li>-->
+<!--<li><a href="#">Page 1</a></li>-->
+<!--<li><a href="#">Page 2</a></li>-->
+<!--</ul>-->
+<!--<ul class="nav navbar-nav navbar-right">-->
+<!--<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>-->
+<!--<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--</nav>-->
+<!--<nav class="navbar navbar-inverse">-->
+<!--<div class="container-fluid">-->
+<!--<div class="navbar-header">-->
+<!--<a class="navbar-brand" href="#">WebSiteName</a>-->
+<!--</div>-->
+<!--<ul class="nav navbar-nav">-->
+<!--<li class="active"><a href="#">Home</a></li>-->
+<!--<li><a href="#">Link</a></li>-->
+<!--<li><a href="#">Link</a></li>-->
+<!--</ul>-->
+<!--<button class="btn btn-danger navbar-btn">Button</button>-->
+<!--</div>-->
+<!--</nav>-->
+<!--<nav class="navbar navbar-inverse">-->
+<!--<div class="container-fluid">-->
+<!--<div class="navbar-header">-->
+<!--<a class="navbar-brand" href="#">WebSiteName</a>-->
+<!--</div>-->
+<!--<ul class="nav navbar-nav">-->
+<!--<li class="active"><a href="#">Home</a></li>-->
+<!--<li><a href="#">Page 1</a></li>-->
+<!--<li><a href="#">Page 2</a></li>-->
+<!--</ul>-->
+<!--&lt;!&ndash;<form class="navbar-form navbar-left" action="home-work-alanyse.html">&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="form-group">&ndash;&gt;-->
+<!--&lt;!&ndash;<input type="text" class="form-control" placeholder="Search">&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;<button type="submit" class="btn btn-default">Submit</button>&ndash;&gt;-->
+<!--&lt;!&ndash;</form>&ndash;&gt;-->
+<!--<form class="navbar-form navbar-left" action="home-work-alanyse.html">-->
+<!--<div class="input-group">-->
+<!--<input type="text" class="form-control" placeholder="Search">-->
+<!--<div class="input-group-btn">-->
+<!--<button class="btn btn-default" type="submit">-->
+<!--<i class="glyphicon glyphicon-search"></i>-->
+<!--</button>-->
+<!--</div>-->
+<!--</div>-->
+<!--</form>-->
+<!--</div>-->
+<!--</nav>-->
+<!--<nav class="navbar navbar-inverse">-->
+<!--<ul class="nav navbar-nav">-->
+<!--<li><a href="#">Link</a></li>-->
+<!--<li><a href="#">Link</a></li>-->
+<!--</ul>-->
+<!--<p class="navbar-text">Some text</p>-->
+<!--</nav>-->
+<!--<nav class="navbar navbar-inverse navbar-fixed-top">-->
+  <!--<div class="container-fluid">-->
+    <!--<div class="navbar-header">-->
+      <!--<a class="navbar-brand" href="#">WebSiteName</a>-->
+    <!--</div>-->
+    <!--<ul class="nav navbar-nav">-->
+      <!--<li class="active"><a href="#">Home</a></li>-->
+      <!--<li><a href="#">Page 1</a></li>-->
+      <!--<li><a href="#">Page 2</a></li>-->
+      <!--<li><a href="#">Page 3</a></li>-->
+    <!--</ul>-->
+  <!--</div>-->
+<!--</nav>-->
+<!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, at blanditiis excepturi, libero modi nisi non pariatur-->
+  <!--porro quaerat quo ratione repellendus sit temporibus tenetur ut voluptatem voluptates. Consectetur delectus eum ipsa-->
+  <!--neque nobis officia sunt voluptates. A adipisci alias architecto aut consequuntur, ducimus, ex expedita illum magni-->
+  <!--molestias nisi quam quidem velit! Aliquid amet autem culpa dolorum enim error exercitationem laborum maxime molestiae,-->
+  <!--nesciunt quibusdam, reiciendis tenetur voluptatem. Ab ad delectus dolorem esse, eveniet inventore, labore magnam nobis-->
+  <!--quaerat, reprehenderit saepe vitae voluptate. Earum ipsa modi perferendis quas quia, quis quo ratione repellendus-->
+  <!--ullam. Corporis esse itaque laborum tempora velit. At debitis impedit ipsam maiores maxime nemo nisi, perferendis-->
+  <!--quia? Autem consectetur est ex illo minima modi nam nihil nostrum repellat voluptas? Ad aliquam aliquid aspernatur-->
+  <!--assumenda consequatur corporis cupiditate distinctio dolore dolores doloribus et eum explicabo harum impedit ipsum-->
+  <!--iusto, laborum magnam magni maiores necessitatibus nemo nihil nisi nobis omnis praesentium provident quaerat qui quia-->
+  <!--quis quisquam ratione repellat repellendus, repudiandae saepe sequi tempora veniam. Aliquam aut, beatae enim ex facere-->
+  <!--minus natus repellat? Accusamus dolores, error eveniet facere in inventore magnam molestiae nam necessitatibus-->
+  <!--nesciunt, nobis quos, recusandae sequi unde vero! Eum explicabo laudantium libero, nemo non pariatur quae quibusdam,-->
+  <!--quidem quod reprehenderit similique sit. Accusantium consequatur inventore libero nesciunt nobis nostrum numquam-->
+  <!--placeat quae, quia quis saepe soluta tenetur velit veniam voluptas. Adipisci aperiam atque consectetur, consequatur,-->
+  <!--distinctio est maxime, nihil quaerat quam rem sapiente sequi temporibus ut velit veritatis voluptas voluptates!-->
+  <!--Accusantium consectetur, corporis delectus dolor inventore laudantium rem unde veritatis. Adipisci aliquid autem-->
+  <!--consectetur dolorem enim exercitationem inventore ipsum mollitia neque, odit officia officiis provident qui quod-->
+  <!--repudiandae? Consectetur consequatur cupiditate eligendi, eum, hic impedit incidunt iure laboriosam nihil porro quae-->
+  <!--quia quis quod reprehenderit tempora totam ullam, vitae voluptate. Beatae doloribus illo non, pariatur provident quas-->
+  <!--qui quis quisquam sed sint? Adipisci aliquam assumenda at aut blanditiis consectetur culpa deserunt dolorum ducimus,-->
+  <!--eius est ex explicabo harum ipsam maxime minus nam natus non porro quibusdam quod quos ratione, reiciendis rem, rerum-->
+  <!--sed similique veritatis! Adipisci enim est laudantium modi nihil obcaecati reprehenderit sapiente ullam? Ad alias-->
+  <!--autem commodi consequatur consequuntur cum dolores ducimus eaque esse eum explicabo fugit illum impedit in laborum-->
+  <!--libero minima, nam porro qui quia reprehenderit saepe suscipit unde! Architecto incidunt iure iusto necessitatibus,-->
+  <!--quia saepe soluta? Dolore illo impedit itaque labore modi placeat quam quas quis saepe voluptatibus? Alias dolorem-->
+  <!--laboriosam officiis recusandae. A aperiam dolorem dolorum ea id ipsa nulla obcaecati officiis perspiciatis placeat-->
+  <!--porro possimus qui, quos sit totam vero, vitae. Ad beatae enim facilis fugit labore pariatur tempora voluptates.-->
+  <!--Ducimus eaque error harum ipsam iste laudantium magnam minus quibusdam quidem, quisquam ratione tempore vitae?-->
+  <!--Assumenda atque beatae cumque doloremque ducimus, enim eveniet impedit iusto magnam mollitia nesciunt quasi qui quod-->
+  <!--sapiente sequi tenetur ut. Eveniet expedita ipsa odit, quasi quos repellendus sapiente voluptatibus! Esse, est in-->
+  <!--ipsum possimus rem repudiandae saepe temporibus? Accusantium animi architecto debitis deleniti dolor fugiat id placeat-->
+  <!--quasi quos ullam. Asperiores beatae blanditiis cum et molestias, nostrum saepe? Asperiores autem ea, fuga illo-->
+  <!--laboriosam similique vitae voluptatem. Cumque fugiat natus quidem repellendus, sapiente similique ut? Ad debitis-->
+  <!--delectus doloremque facilis in minima minus mollitia, natus nihil, optio perspiciatis praesentium quasi quidem?-->
+  <!--Laborum nulla, placeat. Consectetur consequatur exercitationem obcaecati optio possimus sint soluta totam. Eum ex-->
+  <!--facilis fuga harum incidunt, ipsum iste nesciunt non quasi! Deleniti molestiae nihil quibusdam unde! Accusamus animi-->
+  <!--aperiam asperiores at aut consequuntur deleniti dicta doloremque earum error exercitationem iusto minus molestiae nisi-->
+  <!--nobis non odit perspiciatis possimus, praesentium, quas quibusdam quidem suscipit tempore vel voluptas! Ad aperiam-->
+  <!--asperiores commodi culpa delectus deleniti earum, eum facilis fuga, hic iure modi numquam sit sunt ullam velit vitae-->
+  <!--voluptate voluptatum? Adipisci aperiam corporis dignissimos dolorem doloremque doloribus ducimus eligendi enim eos-->
+  <!--explicabo harum illo illum iure labore laudantium modi, molestias neque nesciunt nihil non obcaecati omnis pariatur-->
+  <!--perferendis possimus praesentium quae quidem reprehenderit sed sint tempora tempore tenetur veniam veritatis vero-->
+  <!--voluptas voluptate voluptates. Cum cumque eum eveniet nostrum perspiciatis, tempora! Aut commodi fuga illum magnam-->
+  <!--quis. Consequatur cupiditate ipsa libero quis reiciendis. Animi delectus doloribus eius iure officia optio pariatur-->
+  <!--quisquam repudiandae voluptatem voluptatum! Atque deleniti expedita molestias necessitatibus nisi officia sapiente-->
+  <!--sunt tenetur. Autem eveniet harum illo iusto non optio repellat. A accusantium aspernatur assumenda consequatur ea-->
+  <!--fugiat nam, porro sed veniam voluptatem! Alias amet asperiores distinctio dolore doloremque dolorum eaque earum,-->
+  <!--eligendi error eum eveniet exercitationem harum illum impedit ipsam, iusto labore libero maiores modi molestias-->
+  <!--mollitia odio optio quaerat, quam quas quisquam quod reprehenderit sunt temporibus totam unde ut veniam voluptas.-->
+  <!--Accusamus adipisci amet assumenda earum eligendi in incidunt ipsum magni modi nihil perferendis quae, quas repellat,-->
+  <!--rerum sequi, ullam voluptatum. Nostrum quam, voluptate? Ab ad adipisci asperiores assumenda aut, autem blanditiis-->
+  <!--commodi cum deleniti eveniet ex harum inventore itaque iusto labore minus molestias natus necessitatibus reiciendis-->
+  <!--repudiandae, sequi sit sunt tempore totam unde veniam voluptates! Adipisci aperiam aspernatur consectetur cupiditate-->
+  <!--doloremque enim ex explicabo illum inventore ipsam ipsum maxime minima natus, necessitatibus nesciunt nihil non-->
+  <!--obcaecati, perferendis repellendus reprehenderit repudiandae rerum totam. A ab culpa eos est exercitationem facere hic-->
+  <!--id illo, iure laboriosam minima nisi officia, omnis quibusdam recusandae reprehenderit similique sint soluta suscipit-->
+  <!--velit. Aperiam doloribus ex illo iure iusto libero quam quas rem! Ad architecto aspernatur at aut deleniti distinctio-->
+  <!--dolor ducimus eaque eius enim error eum eveniet exercitationem facere fugiat hic id in, incidunt ipsam ipsum iste-->
+  <!--magni modi natus nulla obcaecati odit officiis, pariatur perferendis quaerat quam, quia quisquam saepe similique-->
+  <!--temporibus tenetur ullam voluptatem! Aperiam autem consequatur deserunt dolore dolores eveniet exercitationem expedita-->
+  <!--fugiat fugit laudantium magnam mollitia nobis, officia quae quas qui, ullam veritatis vitae voluptatibus voluptatum!-->
+  <!--Perspiciatis, quo, similique. Aspernatur dolor illum laborum quaerat unde! Alias aperiam asperiores consequatur-->
+  <!--consequuntur dicta eaque magnam quae quis recusandae, rem. Ad amet architecto asperiores at blanditiis cumque debitis-->
+  <!--dolores earum eligendi esse eveniet harum incidunt itaque laborum nemo nisi placeat, quaerat, quas quia quis quo,-->
+  <!--repudiandae sit vel vero voluptatum. Recusandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. A-->
+  <!--asperiores beatae blanditiis eaque eligendi eum exercitationem ipsum iure, nam optio provident quae recusandae rem-->
+  <!--repellat sit tempore velit. Amet dignissimos et fuga nulla repellat. Architecto eius eos maxime perspiciatis porro-->
+  <!--quaerat veniam, veritatis voluptatem? Alias aut itaque neque ratione sequi similique? Ab accusamus autem, ipsam minus-->
+  <!--necessitatibus odit officiis pariatur, qui quia repudiandae, sapiente sequi sunt vel. Ab, ad alias, aliquam animi-->
+  <!--consequuntur deleniti doloremque ea eum facere illo, ipsam iusto laudantium magni molestias nobis obcaecati odio omnis-->
+  <!--placeat quisquam repellendus saepe sed vitae. Amet assumenda corporis deleniti distinctio dolorem doloribus ducimus-->
+  <!--eius eum ipsum iure, minima nemo neque nisi praesentium provident quaerat quod repellendus saepe sint voluptatum! Ab-->
+  <!--alias consequatur culpa deleniti deserunt dolore ducimus, eligendi et explicabo fuga fugit in incidunt ipsum itaque-->
+  <!--libero magni minima minus nemo nesciunt nobis praesentium quas quia quidem quo quod reiciendis rerum saepe sunt velit-->
+  <!--veritatis. Ab architecto blanditiis corporis dolorum eaque enim harum natus neque nisi numquam praesentium quam,-->
+  <!--quibusdam quidem quod repellat reprehenderit rerum sed sit soluta suscipit ullam veniam voluptatem, voluptates? Ab-->
+  <!--amet consectetur debitis deserunt eaque eos excepturi, explicabo id iure minima natus nemo nihil numquam odit, officia-->
+  <!--provident quia quibusdam quod repellendus reprehenderit repudiandae velit voluptas. A asperiores, corporis deleniti-->
+  <!--dolorem doloribus ex exercitationem, facilis fuga laboriosam neque officia placeat porro possimus praesentium quas,-->
+  <!--quia sint veritatis voluptatem voluptates voluptatibus? Aliquid animi aut blanditiis cumque dolore earum eveniet-->
+  <!--exercitationem hic incidunt itaque iure mollitia neque nulla omnis pariatur quod repellat, vel vero vitae voluptate!-->
+  <!--Accusamus adipisci amet at, aut consectetur doloribus, error et hic id illum in incidunt inventore ipsa itaque libero-->
+  <!--maiores numquam officia placeat ratione repudiandae sapiente sed similique temporibus vel velit vitae voluptatem! A-->
+  <!--alias aliquid at autem beatae commodi dolorem ea eveniet expedita fuga fugiat fugit ipsam iste libero magnam, minima-->
+  <!--nostrum odit quas quod repellendus sequi similique sit veniam. Ad cupiditate et inventore, nam non qui quo saepe?-->
+  <!--Architecto debitis delectus eligendi harum impedit iusto provident ratione repellendus, similique soluta! Accusantium-->
+  <!--et explicabo quidem quos repellat soluta veritatis? Ab accusamus architecto at doloremque illum, inventore magnam quas-->
+  <!--qui repellat vitae! Autem consequuntur dolor inventore quam reprehenderit rerum vero. Aliquam aperiam deleniti dolor-->
+  <!--dolore, dolorem ea eligendi ex, fuga fugiat fugit hic illum in incidunt iure laboriosam maxime modi nemo nisi quaerat,-->
+  <!--quasi quo repudiandae tempora! Ad aliquid assumenda aut cupiditate eius eos est ex facere facilis fuga fugit incidunt-->
+  <!--molestiae obcaecati optio praesentium quaerat quam, ratione soluta tempore totam voluptate voluptatem voluptatum. Ab-->
+  <!--accusamus adipisci aliquam amet at beatae corporis culpa dicta dolorum ea eius eum fuga fugiat iusto, libero-->
+  <!--necessitatibus nemo non nulla numquam odit quae quasi quis sunt tenetur vel, vitae, voluptas? Architecto atque commodi-->
+  <!--cupiditate, delectus illum ipsum iure modi natus nobis nulla perspiciatis provident quas, quis reiciendis rem sequi,-->
+  <!--similique suscipit totam ut vitae. Aliquid autem debitis dolor facere illo iste molestias mollitia nam omnis quo!-->
+  <!--Aspernatur, autem distinctio excepturi id inventore ipsam ipsum itaque magnam, minima nam nobis praesentium veritatis,-->
+  <!--voluptate! Consequatur explicabo saepe soluta suscipit voluptatum! Aliquid architecto atque beatae blanditiis-->
+  <!--consectetur corporis cum est eum eveniet ex, facere fugit impedit maxime natus nobis officiis perferendis perspiciatis-->
+  <!--quae quibusdam ratione rerum sapiente sed sunt totam, voluptates. Adipisci aliquam aperiam autem consequuntur cumque-->
+  <!--dolor enim eveniet, expedita explicabo illum necessitatibus nemo nobis nostrum, officia quod repellat reprehenderit-->
+  <!--sed totam vel veritatis voluptas voluptatem voluptatum! Ab animi at autem blanditiis consequatur dolorum-->
+  <!--exercitationem explicabo facilis fuga fugit id incidunt ipsam itaque labore laboriosam laudantium nemo neque odio,-->
+  <!--officiis pariatur quaerat quam quisquam quo sed sequi sint sunt tempora velit vitae voluptas? Asperiores atque beatae-->
+  <!--dignissimos doloremque, doloribus ex exercitationem facere incidunt ipsa ipsum laudantium libero magnam odit officia-->
+  <!--pariatur quibusdam sunt! Ab accusamus aspernatur at cumque dignissimos dolore doloremque dolores eligendi eos esse ex-->
+  <!--exercitationem fuga inventore magnam maiores maxime minus modi nihil odit placeat possimus reprehenderit repudiandae-->
+  <!--similique sunt tempora tempore temporibus ullam unde, vero voluptatum. Aut, beatae cum delectus eum ex fugit illo-->
+  <!--illum inventore minima modi mollitia optio praesentium quaerat quasi quia quibusdam velit? Aliquam, autem ducimus-->
+  <!--ipsam iure nemo nesciunt nisi odio odit. Amet culpa delectus exercitationem illo odit sit voluptas voluptatum!-->
+  <!--Doloribus ipsum perferendis provident repellendus tempore temporibus? Aliquam amet est, impedit, iste molestias natus,-->
+  <!--nemo quaerat quia rerum soluta ullam unde. Aspernatur culpa cupiditate ducimus enim, eos excepturi, facere facilis hic-->
+  <!--natus nemo quas qui rem similique. Cupiditate dolorum ea earum minus molestias obcaecati recusandae rem rerum ut-->
+  <!--voluptatem? Accusantium assumenda ducimus enim facere fuga iste itaque labore minima, optio porro provident qui-->
+  <!--quisquam quod repellendus vitae. Ab adipisci, aperiam architecto beatae commodi dolor dolore dolores dolorum eaque est-->
+  <!--explicabo facere hic laborum minus, molestias nulla odio pariatur qui quibusdam, quidem reiciendis reprehenderit sit-->
+  <!--tempora vel veniam vitae voluptas. Aliquid at autem culpa dolor eligendi et eum eveniet laborum laudantium minima,-->
+  <!--modi necessitatibus non, obcaecati quod ullam? Commodi, earum iure minus molestias nulla numquam! Facere fugiat-->
+  <!--maiores minus nam odio omnis repudiandae saepe velit. Hic incidunt inventore iste maxime, minus necessitatibus placeat-->
+  <!--quis sint soluta totam. Accusantium architecto aut dicta enim excepturi impedit maxime quisquam quod sed veniam? A-->
+  <!--aliquam aliquid atque autem distinctio dolor dolorem dolores doloribus ea eaque enim error, eveniet ipsa ipsam iusto-->
+  <!--laudantium molestias natus numquam obcaecati perferendis qui quidem quis reiciendis soluta suscipit totam velit-->
+  <!--voluptate? Accusantium adipisci alias aliquid architecto dignissimos ea eaque enim, fugiat laborum maxime, omnis porro-->
+  <!--quas quia repudiandae rerum sed tempora totam ut? Facilis sapiente sunt ut veniam voluptate! Est ex expedita optio,-->
+  <!--perferendis perspiciatis quibusdam vero. Asperiores commodi deserunt illo iure, iusto magnam modi molestias nam nisi-->
+  <!--perspiciatis quae, quam quia quo reprehenderit, sapiente similique sint ullam ut voluptas voluptatem. A accusamus-->
+  <!--architecto at consequatur corporis dolore doloremque eos, explicabo harum, in iste labore magnam molestiae molestias-->
+  <!--neque nostrum officia perspiciatis provident quae quas quidem quisquam recusandae reiciendis, sed velit. Delectus-->
+  <!--dicta distinctio dolorum eos, et eveniet maiores modi nam obcaecati perspiciatis quae quisquam quo, quos repellendus-->
+  <!--soluta. Dolores, maxime, sequi?</p>-->
+<!--<nav class="navbar navbar-inverse">-->
+  <!--<div class="container-fluid">-->
+    <!--<div class="navbar-header">-->
+      <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">-->
+        <!--<span class="icon-bar"></span>-->
+        <!--<span class="icon-bar"></span>-->
+        <!--<span class="icon-bar"></span>-->
+      <!--</button>-->
+      <!--<a class="navbar-brand" href="#">WebSiteName</a>-->
+    <!--</div>-->
+    <!--<div class="collapse navbar-collapse" id="myNavbar">-->
+      <!--<ul class="nav navbar-nav">-->
+        <!--<li class="active"><a href="#">Home</a></li>-->
+        <!--<li><a href="#">Page 1</a></li>-->
+        <!--<li><a href="#">Page 2</a></li>-->
+        <!--<li><a href="#">Page 3</a></li>-->
+      <!--</ul>-->
+      <!--<ul class="nav navbar-nav navbar-right">-->
+        <!--<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>-->
+        <!--<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>-->
+      <!--</ul>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</nav>-->
