@@ -1,1 +1,1 @@
-## For begginers scala playframework
+## For beginners scala play framework
