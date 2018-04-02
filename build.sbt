@@ -1,5 +1,9 @@
 
 name := "play2"
+
+includeFilter in (Assets, LessKeys.less) := "*.less"
+excludeFilter in (Assets, LessKeys.less) := "_*.less"
+
  
 version := "1.0" 
       
