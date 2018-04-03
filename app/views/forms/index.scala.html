@@ -4,13 +4,6 @@
 @forms.main("Home", webJarsUtil) {
   @navbar("home")
   <script src="@routes.Assets.versioned("javascripts/registration.js")" type="text/javascript"></script>
-  <div class="container"><br/>
-    <div class="alert alert-success">
-      <a href="#" class="close" data-dismiss="alert"
-      aria-label="close">×</a>
-      <strong>Success!</strong> It is working as we expected.
-    </div>
-  </div>
   <h1 class="text-center text-danger">Complicated Registration Forms</h1>
   <br>
   <div class="row">
@@ -37,23 +30,23 @@
       <div class="form-group">
         <label class="control-label col-md-3"> Select language(s) <br> which you can speak:</label>
         <div class="col-md-8">
-          <label class="checkbox-inline"><input type="checkbox" value="">English</label>
+          <label class="checkbox-inline"><input type="checkbox" value="english" data-bind="checked: vm.slanguages">English</label>
           <label class="checkbox-inline disabled"><input type="checkbox" disabled value="">Uzbek</label>
-          <label class="checkbox-inline"><input type="checkbox" value="">Russian</label>
-          <label class="checkbox-inline"><input type="checkbox" value="">German</label>
-          <label class="checkbox-inline"><input type="checkbox" value="">French</label>
-          <label class="checkbox-inline"><input type="checkbox" value="">Korean</label>
+          <label class="checkbox-inline"><input type="checkbox" value="russian" data-bind="checked: vm.slanguages">Russian</label>
+          <label class="checkbox-inline"><input type="checkbox" value="german" data-bind="checked: vm.slanguages">German</label>
+          <label class="checkbox-inline"><input type="checkbox" value="french" data-bind="checked: vm.slanguages">French</label>
+          <label class="checkbox-inline"><input type="checkbox" value="korean" data-bind="checked: vm.slanguages">Korean</label>
         </div>
       </div>
       <div class="form-group">
         <label class="control-label col-md-3"> Preferred language:</label>
         <div class="col-md-8">
-          <label class="radio-inline"><input type="radio" name="optradio">English</label>
+          <label class="radio-inline"><input type="radio" name="optradio" data-bind="checked: vm.planguage" value="english">English</label>
           <label class="radio-inline disabled"><input type="radio" disabled name="optradio">Uzbek</label>
-          <label class="radio-inline"><input type="radio" name="optradio">Russian</label>
-          <label class="radio-inline"><input type="radio" name="optradio">German</label>
-          <label class="radio-inline"><input type="radio" name="optradio">French</label>
-          <label class="radio-inline"><input type="radio" name="optradio">Korean</label>
+          <label class="radio-inline"><input type="radio" name="optradio" data-bind="checked: vm.planguage" value="russian">Russian</label>
+          <label class="radio-inline"><input type="radio" name="optradio" data-bind="checked: vm.planguage" value="german">German</label>
+          <label class="radio-inline"><input type="radio" name="optradio" data-bind="checked: vm.planguage" value="french">French</label>
+          <label class="radio-inline"><input type="radio" name="optradio" data-bind="checked: vm.planguage" value="korean">Korean</label>
         </div>
       </div>
       <button type="submit" class="btn btn-success" data-bind="click: vm.onSubmit">Submit</button>

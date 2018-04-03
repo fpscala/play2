@@ -7,14 +7,18 @@ $ ->
       alert('something went wrong')
 
   vm = ko.mapping.fromJS
-    email:'eee'
+    email:'eee@qwe'
     psw: ''
     comment: ''
+    slanguages: []
+    planguage: ''
 
   vm.onSubmit = ->
-#    console.log('email', vm.email())
-#    console.log('psw', vm.psw())
-#    console.log('comment', vm.comment())
+    console.log('email', vm.email())
+    console.log('slanguages', vm.slanguages())
+    console.log('planguage', vm.planguage())
+    console.log('psw', vm.psw())
+    console.log('comment', vm.comment())
     $.ajax
       url: apiUrl.reg
       type: 'POST'
