@@ -19,14 +19,14 @@ class MessageManager @Inject()(val environment: Environment,
   implicit val defaultTimeout = Timeout(60.seconds)
 
   def receive = {
-    case AddUser(email, password) =>
-      addUser(email, password).pipeTo(sender())
+    case AddUser(user) =>
+      addUser(user).pipeTo(sender())
 
     case _ => log.info(s"received unknown message")
   }
 
-  private def addUser(email: String, password: String) = {
-    usersDao.create(UsersData(email, password)).flatMap {user =>
+  private def addUser(userD: UsersData) = {
+    usersDao.create(userD).flatMap {user =>
       Future.successful(user)
     }
   }

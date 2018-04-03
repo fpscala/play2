@@ -4,6 +4,7 @@ import javax.inject.{Inject, Singleton}
 import com.google.inject.ImplementedBy
 import play.api.db.slick.{DatabaseConfigProvider, HasDatabaseConfigProvider}
 import com.typesafe.scalalogging.LazyLogging
+import play.api.libs.json.JsValue
 import protocols.MessageProtocol.UsersData
 import slick.jdbc.JdbcProfile
 
@@ -15,11 +16,11 @@ trait UsersComponent  { self: HasDatabaseConfigProvider[JdbcProfile] =>
   class Users(tag: Tag) extends Table[UsersData](tag, "users") {
     def email = column[String]("email", O.PrimaryKey)
     def password = column[String]("password")
-//    def comment = column[Option[String]]("comment")
-//    def sLanguages = column[List[String]]("sLanguages")
-//    def pLanguage = column[String]("pLanguage")
+    def comment = column[String]("comment")
+    def pLanguage = column[String]("pLanguage")
+    def sLanguages = column[JsValue]("sLanguages")
 
-    def * = (email, password) <> (UsersData.tupled, UsersData.unapply _)
+    def * = (email, password, comment.?, pLanguage.?, sLanguages.?) <> (UsersData.tupled, UsersData.unapply _)
   }
 }
 
@@ -36,7 +37,6 @@ class UsersDaoImpl @Inject()(protected val dbConfigProvider: DatabaseConfigProvi
     with LazyLogging {
 
   import utils.PostgresDriver.api._
-  import scala.concurrent.ExecutionContext.Implicits.global
 
   val users = TableQuery[Users]
 

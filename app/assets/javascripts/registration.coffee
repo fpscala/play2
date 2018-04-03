@@ -26,6 +26,8 @@ $ ->
         email: vm.email()
         psw: vm.psw()
         comment: vm.comment()
+        sLanguages: vm.slanguages()
+        pLanguage: vm.planguage()
       )
       dataType: 'json'
       contentType: 'application/json'
