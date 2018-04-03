@@ -1,7 +1,7 @@
 package protocols
 
 object MessageProtocol {
-  case class GetMessage(msg: String)
+  case class AddUser(email: String, password: String)
 
   case class UsersData(email: String, password: String)
 }

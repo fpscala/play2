@@ -7,7 +7,7 @@ import com.typesafe.scalalogging.LazyLogging
 import javax.inject._
 import play.api.libs.json.Json
 import play.api.mvc._
-import protocols.MessageProtocol.GetMessage
+import protocols.MessageProtocol.AddUser
 import views.html.forms._
 
 import scala.concurrent.ExecutionContext
@@ -29,8 +29,10 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents,
 
   def register() = Action.async(parse.json){ implicit request => {
     val email = (request.body \ "email").as[String]
+    val password = (request.body \ "psw").as[String]
     logger.info(s"email: $email")
-    (messageManager ? GetMessage(email)).mapTo[String].map {message =>
+    logger.info(s"psw: $password")
+    (messageManager ? AddUser(email, password)).mapTo[String].map { message =>
       logger.info(s"message from actor: $message")
       Ok(Json.toJson(message))
     }
