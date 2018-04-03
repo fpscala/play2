@@ -5,5 +5,6 @@
 * Knockout,
 * Less,
 * Actor System,
+* Slick
 * _SCALA_,
 * *PLAY FRAMEWORK*
