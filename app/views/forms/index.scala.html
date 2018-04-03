@@ -49,8 +49,32 @@
           <label class="radio-inline"><input type="radio" name="optradio" data-bind="checked: vm.planguage" value="korean">Korean</label>
         </div>
       </div>
-      <button type="submit" class="btn btn-success" data-bind="click: vm.onSubmit">Submit</button>
+      <button type="submit" class="btn btn-success pull-right" data-bind="click: vm.onSubmit">Submit</button> &nbsp;
+      <button type="button" class="btn btn-primary" data-bind="click: vm.report">Show Reports</button>
       </form>
+      <br>
+      <table class="table table-striped table-bordered" data-bind="visible: vm.users().length > 0">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Comment</th>
+            <th>sLanguages</th>
+            <th>pLanguage</th>
+          </tr>
+        </thead>
+        <tbody data-bind="foreach: vm.users()">
+          <tr>
+            <td data-bind="text: $index() + 1"></td>
+            <td data-bind="text: $data.email"></td>
+            <td data-bind="text: $data.password"></td>
+            <td data-bind="text: $data.comment"></td>
+            <td data-bind="text: $data.sLanguages"></td>
+            <td data-bind="text: $data.pLanguage"></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 }

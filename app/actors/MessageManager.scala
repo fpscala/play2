@@ -6,7 +6,7 @@ import akka.util.Timeout
 import dao.UsersDao
 import javax.inject.Inject
 import play.api.Environment
-import protocols.MessageProtocol.{AddUser, UsersData}
+import protocols.MessageProtocol.{AddUser, GetAllUsers, UsersData}
 
 import scala.concurrent.duration.DurationInt
 import scala.concurrent.{ExecutionContext, Future}
@@ -22,6 +22,9 @@ class MessageManager @Inject()(val environment: Environment,
     case AddUser(user) =>
       addUser(user).pipeTo(sender())
 
+    case GetAllUsers =>
+      getAllUsers.pipeTo(sender())
+
     case _ => log.info(s"received unknown message")
   }
 
@@ -29,5 +32,9 @@ class MessageManager @Inject()(val environment: Environment,
     usersDao.create(userD).flatMap {user =>
       Future.successful(user)
     }
+  }
+
+  private def getAllUsers = {
+    usersDao.getUsers
   }
 }

@@ -7,10 +7,10 @@ import com.typesafe.scalalogging.LazyLogging
 import javax.inject._
 import play.api.libs.json.Json
 import play.api.mvc._
-import protocols.MessageProtocol.{AddUser, UsersData}
+import protocols.MessageProtocol.{AddUser, GetAllUsers, UsersData}
 import views.html.forms._
 
-import scala.concurrent.ExecutionContext
+import scala.concurrent.{ExecutionContext, Future}
 import scala.concurrent.duration.DurationInt
 
 
@@ -44,5 +44,13 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents,
       Ok(Json.toJson(message))
     }
   }}
+
+  def getAllUsers = Action.async {
+    (messageManager ? GetAllUsers).mapTo[Seq[UsersData]].map { users =>
+      logger.info(s"users: $users")
+      Ok(Json.toJson(Map("users" -> users)))
+    }
+
+  }
 
 }

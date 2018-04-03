@@ -27,6 +27,7 @@ trait UsersComponent  { self: HasDatabaseConfigProvider[JdbcProfile] =>
 @ImplementedBy(classOf[UsersDaoImpl])
 trait UsersDao {
   def create(usersData: UsersData): Future[String]
+  def getUsers: Future[Seq[UsersData]]
 }
 
 @Singleton
@@ -44,5 +45,9 @@ class UsersDaoImpl @Inject()(protected val dbConfigProvider: DatabaseConfigProvi
     db.run {
       (users returning users.map(_.email)) += userData
     }
+  }
+
+  override def getUsers(): Future[Seq[UsersData]] = {
+    db.run(users.result)
   }
 }
