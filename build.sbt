@@ -41,7 +41,14 @@ val dbLibs = Seq(
   pgSqlDriver
 )
 
-libraryDependencies ++= akkaLibs ++ akkaHttp ++ dbLibs ++ Seq( jdbc , ehcache , ws , specs2 % Test , guice ,
+val commonDependencies = Seq(
+  "com.typesafe.play" %% "play-json" % "2.6.8",
+  "com.typesafe.play" %% "play-slick" % "3.0.3",
+  "com.typesafe.play" %% "play-slick-evolutions" % "3.0.3",
+  "org.joda" % "joda-convert" % "1.8.1"
+)
+
+libraryDependencies ++= akkaLibs ++ akkaHttp ++ commonDependencies ++ dbLibs ++ Seq(ws , specs2 % Test , guice ,
   "com.typesafe.scala-logging" % "scala-logging_2.12" % "3.7.2",
   "ch.qos.logback" % "logback-classic" % "1.1.7",
   "ch.qos.logback" % "logback-core" % "1.1.7",
@@ -54,6 +61,7 @@ libraryDependencies ++= akkaLibs ++ akkaHttp ++ dbLibs ++ Seq( jdbc , ehcache , 
   "org.webjars" % "requirejs" % "2.2.0",
   "org.webjars" % "bootstrap" % "3.3.4",
   "org.webjars" % "momentjs" % "2.8.1"
+
 )
 
 unmanagedResourceDirectories in Test <+=  baseDirectory ( _ /"target/web/public/test" )  
