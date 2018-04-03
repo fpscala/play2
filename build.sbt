@@ -30,7 +30,18 @@ val akkaHttp = Seq(
   "com.typesafe.akka" %% "akka-http-spray-json" % "10.0.10"
 )
 
-libraryDependencies ++= akkaLibs ++ akkaHttp ++ Seq( jdbc , ehcache , ws , specs2 % Test , guice ,
+val pgSqlDriver = "org.postgresql" % "postgresql" % "42.0.0"
+
+val dbLibs = Seq(
+  "com.typesafe.slick" %% "slick" % "3.2.1",
+  "com.github.tminglei" %% "slick-pg" % "0.15.1",
+  "com.github.tminglei" %% "slick-pg_play-json" % "0.15.1",
+  "com.h2database" % "h2" % "1.4.194",
+  "com.opentable.components" % "otj-pg-embedded" % "0.10.0",
+  pgSqlDriver
+)
+
+libraryDependencies ++= akkaLibs ++ akkaHttp ++ dbLibs ++ Seq( jdbc , ehcache , ws , specs2 % Test , guice ,
   "com.typesafe.scala-logging" % "scala-logging_2.12" % "3.7.2",
   "ch.qos.logback" % "logback-classic" % "1.1.7",
   "ch.qos.logback" % "logback-core" % "1.1.7",
