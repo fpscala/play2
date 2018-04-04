@@ -30,6 +30,7 @@ class MessageManager @Inject()(val environment: Environment,
 
   private def addUser(userD: UsersData) = {
     usersDao.create(userD).flatMap {user =>
+      log.info(s"user: $user")
       Future.successful(user)
     }
   }
