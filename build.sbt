@@ -1,5 +1,5 @@
 
-name := "play2"
+name := "secret-retreat-56191"
 
 includeFilter in (Assets, LessKeys.less) := "*.less"
 excludeFilter in (Assets, LessKeys.less) := "_*.less"
