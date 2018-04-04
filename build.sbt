@@ -1,5 +1,5 @@
 
-name := "secret-retreat-56191"
+name := "web-lessons-tuit"
 
 includeFilter in (Assets, LessKeys.less) := "*.less"
 excludeFilter in (Assets, LessKeys.less) := "_*.less"
